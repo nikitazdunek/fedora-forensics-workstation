@@ -1,0 +1,10 @@
+# Evidence and case data never go in the repo
+*.E01
+*.E0?
+*.raw
+*.dd
+*.img
+*.aff
+*.zip
+evidence/
+autopsy-cases/
