@@ -8,3 +8,11 @@
 *.zip
 evidence/
 autopsy-cases/
+*.Ex01
+*.aff4
+*.vmdk
+*.vhd
+*.vhdx
+*.qcow2
+*.mem
+recup_dir*/

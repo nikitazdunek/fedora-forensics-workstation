@@ -19,8 +19,22 @@ working on the command line.
 ## Autopsy
 
 * **Version:** 4.22.1
-* **Installed with:** the official snap, `sudo snap install autopsy`,
-  then connecting its interfaces so it can read disk images.
+* **Installed with:** the official snap, then connecting its interfaces
+  so it can read disk images:
+
+  ```
+  sudo dnf install snapd
+  sudo ln -s /var/lib/snapd/snap /snap
+  sudo snap install autopsy
+  sudo snap connect autopsy:hardware-observe
+  sudo snap connect autopsy:kernel-crypto-api
+  sudo snap connect autopsy:network-observe
+  sudo snap connect autopsy:network-setup-observe
+  sudo snap connect autopsy:removable-media
+  sudo snap connect autopsy:system-files-dev :system-files
+  sudo snap connect autopsy:system-files-hugepages :system-files
+  sudo snap connect autopsy:system-observe
+  ```
 * **What it does:** GUI case management over The Sleuth Kit, with ingest
   modules for hashing, file type detection, EXIF, keyword search and
   carving.
@@ -40,9 +54,10 @@ working on the command line.
 * **Why:** E01 is the standard evidence format, and verifying an image
   before analysis is basic integrity practice.
 
-## GHex
+## wxHexEditor
 
-* **Installed with:** `sudo dnf install ghex`
+* **Version:** 0.24
+* **Installed with:** `flatpak install flathub org.wxhexeditor.wxHexEditor`
 * **Why:** a simple hex editor for checking file signatures and raw
   bytes by hand.
 
